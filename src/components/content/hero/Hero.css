@@ -1,0 +1,114 @@
+.hero-frame {
+  width: 100%;
+  height: 100vh;
+  padding-top: 16.5rem;
+  background: var(--clr-black);
+  color: var(--clr-white);
+
+  .hero {
+    margin-inline: auto;
+    max-width: 1140px;
+    height: 100%;
+    background: var(--clr-black);
+    color: var(--clr-white);
+
+    .hero-heading {
+      width: 100%;
+      margin-bottom: 60px;
+
+      h1 {
+        color: var(--clr-white-1);
+        line-height: 120%;
+
+        .h1-thin {
+          font-weight: var(--fw-100);
+        }
+      }
+    }
+
+    .hero-desc {
+      width: 42%;
+      margin-bottom: 60px;
+      p {
+        background: var(--clr-black);
+        color: var(--clr-white-3);
+      }
+    }
+
+    .row {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .wwd-btn {
+        width: max-content;
+        padding: var(--size-2) var(--size-2);
+        padding-left: calc(var(--size-3) + 1.5rem);
+        background: var(--clr-action);
+        border-radius: 5rem;
+        text-align: center;
+        margin-right: 30px;
+
+        .action-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: var(--size-3);
+          transition: all 0.3s ease-in-out;
+
+          svg {
+            background: var(--clr-black);
+            width: 36px;
+            height: 36px;
+            padding: 7.5px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+          }
+        }:hover{
+          transform: scale(1.02);
+          position: relative;
+          transition: all 0.3s ease-in-out;
+
+          svg{
+            transform: scale(1.2);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+
+      .works-btn {
+        width: max-content;
+        padding: var(--size-2) var(--size-3);
+        background: transparent;
+        border-radius: 5rem;
+        text-align: center;
+        margin-right: 30px;
+
+        .action-btn {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--clr-white);
+          gap: var(--size-2);
+          transition: all 0.3s ease-in-out;
+
+          svg {
+            background: var(--clr-white-4);
+            width: 36px;
+            height: 36px;
+            padding: 7.5px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+          }
+        }:hover{
+          position: relative;
+
+          svg{
+            transform: scale(1.2);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
