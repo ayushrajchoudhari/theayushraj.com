@@ -18,8 +18,8 @@ const Menu = () => {
   return (
     <div className="ar-menu">
       <div className="menu-top">
-        <div className="menu-logo">
           <svg
+            className="logo"
             id="Layer_1"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -41,10 +41,8 @@ const Menu = () => {
               fill="#f98d00"
             />
           </svg>
-        </div>
-        <div className="ar-menu-btn" onClick={()=> setActive(!active)}>
-          <div className={active? "activeMenu menu-btn" : "menu-btn"}>
-          </div>
+        <div className="ar-menu-btn" onClick={() => setActive(!active)}>
+          <div className={active ? "activeMenu menu-btn" : "menu-btn"}></div>
         </div>
       </div>
     </div>

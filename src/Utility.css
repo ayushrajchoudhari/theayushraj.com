@@ -21,6 +21,7 @@
 
     --fs-x-small : 12px;
     --fs-small : 16px;
+    --fs-sm : 18px;
     --fs-medium : 28px;
     --fs-large : 68px;
     --fs-x-large : 86px;
@@ -39,6 +40,8 @@
     --size-5 : 2.5rem;
     --size-6 : 3rem;
     --size-7 : 3.5rem;
+    --size-8 : 4rem;
+    --size-9 : 4.5rem;
 }
 
 a{
@@ -66,6 +69,11 @@ h2{
 
 h4{
     font-size: var(--fs-medium);
+    font-weight: var(--fw-500);
+}
+
+h6{
+    font-size: var(--fs-sm);
     font-weight: var(--fw-500);
 }
 

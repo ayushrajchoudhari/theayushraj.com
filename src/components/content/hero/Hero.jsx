@@ -8,7 +8,7 @@ const Hero = () => {
           <h1>
             Discovering <span className="h1-thin"> a Better</span>
             <br />
-            Code <span className="h1-thin"> Everyday..</span>
+            Approach <span className="h1-thin"> Everyday..</span>
           </h1>
         </div>
 

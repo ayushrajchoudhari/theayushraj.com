@@ -10,20 +10,15 @@
     align-items: center;
     justify-content: space-between;
 
-
-    .menu-logo {
+    .logo {
       height: 100%;
 
-      svg {
-        height: 100%;
+      g {
+        fill: var(--clr-white);
+      }
 
-        g {
-          fill: #fff;
-        }
-
-        .circle {
-          fill: #f98d00;
-        }
+      .circle {
+        fill: #f98d00;
       }
     }
 
