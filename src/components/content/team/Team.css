@@ -133,31 +133,101 @@
           height: 40%;
           margin-bottom: 30px;
           overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           .mate {
+            width: 100%;
+            scale: 1.1;
+            transition: all 0.4s ease-in-out;
+          }
+
+          .mate-desc {
+            position: absolute;
+            display: none;
+            transition: all 0.4s ease-in-out;
+
+            background: var(--clr-black-2);
+            color: var(--clr-white);
+            width: 244px;
+            height: 364px;
+
+            .decs-text {
+              position: relative;
+              top: 0;
+              left: 0;
+              background: var(--clr-black-2);
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              opacity: 1;
+              height: 100%;
               width: 100%;
-              scale: 1.1;
-              transition: all 0.4s ease-in-out;
+
+              h5{
+                font-size: 20px;
+                line-height: 150%;
+                margin-bottom: 5px;
+              }
+
+              p{
+              text-transform: uppercase;
+              font-size: var(--fs-x-small);
+              font-weight: var(--fw-500);
+              margin-bottom: 10px;
+              color: var(--clr-white-3);
+              }
+
+              .social {
+                display: flex;
+                width: 60%;
+                justify-content: space-between;
+                align-items: center;
+
+                .social-media {
+                  height: 22px;
+                  width: 22px;
+                }
+                :hover{
+                  cursor: pointer;
+                }
+              }
             }
-            :hover {
-              scale: 1;
-              transition: all 0.4s ease-in-out;
-            }
+          }
+        }
+
+        :hover {
+          .mate {
+            scale: 1;
+            transition: all 0.4s ease-in-out;
+            opacity: 0.8;
+          }
+
+          .mate-desc{
+            display: block;
+            transition: all 0.4s ease-in-out;
+          }
+          /* ::after{
+            content: "";
+            width: 100;
+          } */
         }
       }
 
       .two {
         text-align: left;
 
-        p{
-            margin-bottom: 30px;
+        p {
+          margin-bottom: 30px;
 
-            span{
-                color: var(--clr-action);
-            }
+          span {
+            color: var(--clr-action);
+          }
         }
       }
-
     }
   }
 }
