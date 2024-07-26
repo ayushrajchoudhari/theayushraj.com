@@ -2,7 +2,8 @@
   width: 100%;
   /* height: 100vh; */
   padding: var(--size-7);
-  /* background-color: var(--clr-black); */
+  background-color: var(--clr-black);
+  mix-blend-mode: difference;
 
   z-index: 5;
   position: fixed;
