@@ -3,6 +3,7 @@ import Menu from "../components/menu/Menu";
 import Hero from "../components/content/hero/Hero";
 import About from "../components/content/about/About"
 import Team from "./content/team/Team";
+import Feedback from "./content/feedback/Feedback";
 
 const Home = () => {
     return(
@@ -14,6 +15,7 @@ const Home = () => {
           <Hero />
           <About />
           <Team />
+          <Feedback />
         </div> 
         </>
     )
