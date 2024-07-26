@@ -8,6 +8,8 @@
     --clr-black-2 : rgba(0, 0, 0, 0.5);
     --clr-black : #000000;
 
+    --clr-grey : rgb(242, 242, 242);
+
     --clr-white-1 : rgba(255, 255, 255, 0.9);
     --clr-white-2 : rgba(255, 255, 255, 0.5);
     --clr-white-3 : rgba(255, 255, 255, 0.4);

@@ -21,6 +21,8 @@ const Menu = () => {
           <svg
             className="logo"
             id="Layer_1"
+            fill="#fff"
+            stroke="0"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 192 62.27"
