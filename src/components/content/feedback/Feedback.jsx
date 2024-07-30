@@ -5,20 +5,21 @@ import Next from "../../../assets/icons/next.svg";
 import { useState } from "react";
 
 const Feedback = () => {
-  const [activeCard, setActiveCard] = useState("card1");
   const [feedToggle, setFeedToggle] = useState(0);
+  const [activeCard, setActiveCard] = useState(`card${feedToggle}`);
 
   let togglePrevious = () => {
-    setFeedToggle((prevIdx) => (prevIdx - 1 + 10) % 10);
+    setFeedToggle((prevIdx) => (prevIdx - 1 + 7) % 7);
   }
   
   let toggleNext = () => {
-    setFeedToggle((prevIdx) => (prevIdx + 1) % 10);
+    setFeedToggle((prevIdx) => (prevIdx + 1) % 7);
   }
 
   const feed = [
     {
       feedIdx: 1,
+      img: Mate1,
       name: "Customer #1",
       feedText:
         "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
@@ -26,55 +27,44 @@ const Feedback = () => {
     {
       feedIdx: 2,
       name: "Customer #2",
+      img: Mate1,
       feedText:
         "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
     },
     {
       feedIdx: 3,
       name: "Customer #3",
+      img: Mate1,
       feedText:
         "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
     },
     {
       feedIdx: 4,
       name: "Customer #4",
+      img: Mate1,
       feedText:
         "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
     },
     {
       feedIdx: 5,
       name: "Customer #5",
+      img: Mate1,
       feedText:
         "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
     },
     {
       feedIdx: 6,
       name: "Customer #6",
+      img: Mate1,
       feedText:
         "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
     },
     {
       feedIdx: 7,
       name: "Customer #7",
+      img: Mate1,
       feedText:
         "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
-    },
-    {
-      feedIdx: 8,
-      name: "Customer #8",
-      feedText:
-        "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
-    },    {
-      feedIdx: 9,
-      name: "Customer #9",
-      feedText:
-        "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
-    },
-    {
-      feedIdx: 10,
-      name: "Customer #10",
-      feedText:
-        "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
     }
   ];
 
@@ -98,83 +88,94 @@ const Feedback = () => {
           </h2>
         </div>
         <div className="feedback-customer">
+
           <div
             className={`customer-card card-up ${
+              activeCard === "card0" ? "active-card" : " "
+            }`}
+            onClick={() => {
+              setActiveCard("card0");
+              setFeedToggle(0);
+            }}
+          >
+            <img src={feed[0].img} className="card" />
+          </div>
+
+          <div
+            className={`customer-card card-dwn ${
               activeCard === "card1" ? "active-card" : " "
             }`}
             onClick={() => {
               setActiveCard("card1");
+              setFeedToggle(1);
             }}
           >
-            <img src={Mate1} className="card" />
+            <img src={feed[1].img} className="card" />
           </div>
 
           <div
-            className={`customer-card card-dwn ${
+            className={`customer-card card-up ${
               activeCard === "card2" ? "active-card" : " "
             }`}
             onClick={() => {
               setActiveCard("card2");
+              setFeedToggle(2);
             }}
           >
-            <img src={Mate1} className="card" />
+            <img src={feed[2].img} className="card" />
           </div>
 
           <div
-            className={`customer-card card-up ${
+            className={`customer-card card-dwn ${
               activeCard === "card3" ? "active-card" : " "
             }`}
             onClick={() => {
               setActiveCard("card3");
+              setFeedToggle(3);
             }}
           >
-            <img src={Mate1} className="card" />
+            <img src={feed[3].img} className="card" />
           </div>
 
           <div
-            className={`customer-card card-dwn ${
+            className={`customer-card card-up ${
               activeCard === "card4" ? "active-card" : " "
             }`}
             onClick={() => {
               setActiveCard("card4");
+              setFeedToggle(4);
             }}
           >
-            <img src={Mate1} className="card" />
-          </div>
-
-          <div
-            className={`customer-card card-up ${
-              activeCard === "card5" ? "active-card" : " "
-            }`}
-            onClick={() => {
-              setActiveCard("card5");
-            }}
-          >
-            <img src={Mate1} className="card" />
+            <img src={feed[4].img} className="card" />
           </div>
 
           <div
             className={`customer-card card-dwn ${
-              activeCard === "card6" ? "active-card" : " "
+              activeCard === "card5" ? "active-card" : " "
             }`}
             onClick={() => {
-              setActiveCard("card6");
+              setActiveCard("card5");
+              setFeedToggle(5);
             }}
           >
-            <img src={Mate1} className="card" />
+            <img src={feed[5].img} className="card" />
           </div>
 
           <div
             className={`customer-card card-up ${
-              activeCard === "card7" ? "active-card" : " "
+              activeCard === "card6" ? "active-card" : " "
             }`}
             onClick={() => {
-              setActiveCard("card7");
+              setActiveCard("card6");
+              setFeedToggle(6);
             }}
           >
-            <img src={Mate1} className="card" />
+            <img src={feed[6].img} className="card" />
           </div>
+
         </div>
+
+
         <div className="feedback-desc">
           <span className="colon">
             <svg
@@ -202,14 +203,20 @@ const Feedback = () => {
               <img
                 className="arrow"
                 src={Previous}
-                onClick={togglePrevious}
+                onClick={ () => {
+                  togglePrevious();
+                  setActiveCard(`card${(feedToggle-1+7)%7}`);
+                }}
               />
             </div>
             <div className="next">
               <img
                 className="arrow"
                 src={Next}
-                onClick={toggleNext}
+                onClick={() => {
+                  toggleNext();
+                  setActiveCard(`card${(feedToggle+1)%7}`);
+                }}
               />
             </div>
           </div>

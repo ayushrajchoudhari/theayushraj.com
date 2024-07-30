@@ -91,6 +91,7 @@
       margin-inline: auto;
       width: 80%;
       padding: 5%;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -113,6 +114,7 @@
 
       .customer-text {
         color: var(--clr-black-2);
+        min-height: 150px;
 
         .text {
           font-size: 20px;
@@ -126,7 +128,7 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        bottom: 75px;
+        bottom: 112px;
         z-index: 7;
 
         .prev {
