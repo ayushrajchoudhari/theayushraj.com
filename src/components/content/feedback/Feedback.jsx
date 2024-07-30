@@ -1,9 +1,84 @@
 import "./Feedback.css";
 import Mate1 from "../../../assets/images/mate1.jpg";
+import Previous from "../../../assets/icons/previous.svg";
+import Next from "../../../assets/icons/next.svg";
 import { useState } from "react";
 
 const Feedback = () => {
   const [activeCard, setActiveCard] = useState("card1");
+  const [feedToggle, setFeedToggle] = useState(0);
+
+  let togglePrevious = () => {
+    setFeedToggle((prevIdx) => (prevIdx - 1 + 10) % 10);
+  }
+  
+  let toggleNext = () => {
+    setFeedToggle((prevIdx) => (prevIdx + 1) % 10);
+  }
+
+  const feed = [
+    {
+      feedIdx: 1,
+      name: "Customer #1",
+      feedText:
+        "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      feedIdx: 2,
+      name: "Customer #2",
+      feedText:
+        "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    },
+    {
+      feedIdx: 3,
+      name: "Customer #3",
+      feedText:
+        "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      feedIdx: 4,
+      name: "Customer #4",
+      feedText:
+        "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    },
+    {
+      feedIdx: 5,
+      name: "Customer #5",
+      feedText:
+        "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      feedIdx: 6,
+      name: "Customer #6",
+      feedText:
+        "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    },
+    {
+      feedIdx: 7,
+      name: "Customer #7",
+      feedText:
+        "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      feedIdx: 8,
+      name: "Customer #8",
+      feedText:
+        "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    },    {
+      feedIdx: 9,
+      name: "Customer #9",
+      feedText:
+        "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      feedIdx: 10,
+      name: "Customer #10",
+      feedText:
+        "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    }
+  ];
+
+  // let fId = Math.floor(Math.random()*10);
 
   return (
     <div className="feedback-frame">
@@ -116,16 +191,27 @@ const Feedback = () => {
             </svg>
           </span>
           <div className="customer-name">
-            <h5 className="name">Customer #1</h5>
+            <h5 className="name">{feed[feedToggle].name}</h5>
           </div>
           <div className="customer-text">
-            <p className="text">
-              This creative agency stands out with their exceptional talent and
-              expertise. Their ability to think outside the box and bring unique
-              ideas to life is truly impressive. With meticulous attention to
-              detail, they consistently deliver visually stunning and impactful
-              work.
-            </p>
+            <p className="text">{feed[feedToggle].feedText}</p>
+          </div>
+
+          <div className="arrow-toggle">
+            <div className="prev">
+              <img
+                className="arrow"
+                src={Previous}
+                onClick={togglePrevious}
+              />
+            </div>
+            <div className="next">
+              <img
+                className="arrow"
+                src={Next}
+                onClick={toggleNext}
+              />
+            </div>
           </div>
         </div>
       </section>
