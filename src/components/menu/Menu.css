@@ -80,3 +80,10 @@
     }
   }
 }
+
+
+@media (max-width : 1144px) {
+  .ar-menu{
+    background: var(--clr-black);
+  }
+}

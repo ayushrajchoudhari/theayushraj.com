@@ -16,3 +16,19 @@
   height: 100%;
   background: var(--clr-black);
 }
+
+@media (max-width : 1144px) {
+  .menu-frame{
+    padding-block: var(--size-4);
+    background-color: var(--clr-black);
+    mix-blend-mode: normal;
+  }
+}
+
+@media (max-width : 864px) {
+  .menu-frame{
+    padding: var(--size-3) var(--size-3);
+    background-color: var(--clr-black);
+    mix-blend-mode: normal;
+  }
+}
