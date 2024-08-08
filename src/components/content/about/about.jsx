@@ -10,7 +10,7 @@ const About = () => {
           <div className="about-heading">
             <h2>
               Discover <span className="h2-thin"> Our</span>
-              <br />
+              <br className="break" />
               Work <span className="h2-thin"> Place..</span>
             </h2>
           </div>
@@ -39,7 +39,7 @@ const About = () => {
             <h6 className="quote">
               Passionately Creating{" "}
               <span className="h6-thin"> New Wonders:</span>
-              <br />
+              <br className="break"/>
               Unleashing <span className="h6-thin">Boundless Creativity.</span>
             </h6>
           </div>
