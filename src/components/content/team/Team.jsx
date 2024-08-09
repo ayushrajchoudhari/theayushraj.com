@@ -15,8 +15,8 @@ const Team = () => {
         <div className="left">
           <div className="team-heading">
             <h2>
-              Meet <span className="h2-thin"> Our</span>
-              <br />
+              Meet <span className="h2-thin"> Our </span>
+              <br className="break"/>
               Members...
             </h2>
           </div>
@@ -59,7 +59,7 @@ const Team = () => {
         </div>
         <div className="right">
           <div className="one col">
-            <div className="model-icon">
+            <div className="model-icon m1">
               <img src={Mate2} alt="" className="mate" />
 
               <div className="mate-desc">
@@ -76,7 +76,7 @@ const Team = () => {
               </div>
 
             </div>
-            <div className="model-icon">
+            <div className="model-icon m2">
               <img src={Mate3} alt="" className="mate" />
 
               <div className="mate-desc">
@@ -95,11 +95,11 @@ const Team = () => {
             </div>
           </div>
           <div className="two col">
-            <p>
+            <p className="m0">
               <span className="star-pt">*</span>
               Official Members.
             </p>
-            <div className="model-icon">
+            <div className="model-icon m3">
               <img src={Mate4} alt="" className="mate" />
 
               <div className="mate-desc">
@@ -116,7 +116,7 @@ const Team = () => {
               </div>
 
             </div>
-            <div className="model-icon">
+            <div className="model-icon m4">
               <img src={Mate5} alt="" className="mate" />
 
               <div className="mate-desc">
