@@ -4,6 +4,7 @@ import Hero from "../components/content/hero/Hero";
 import About from "../components/content/about/About"
 import Team from "./content/team/Team";
 import Feedback from "./content/feedback/Feedback";
+import Footer from "./footer/Footer";
 
 const Home = () => {
     return(
@@ -16,6 +17,7 @@ const Home = () => {
           <About />
           <Team />
           <Feedback />
+          <Footer />
         </div> 
         </>
     )
