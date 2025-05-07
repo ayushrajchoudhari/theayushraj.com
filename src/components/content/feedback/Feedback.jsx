@@ -2,11 +2,13 @@ import "./Feedback.css";
 import Mate1 from "../../../assets/images/mate1.jpg";
 import Previous from "../../../assets/icons/previous.svg";
 import Next from "../../../assets/icons/next.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Feedback = () => {
   const [feedToggle, setFeedToggle] = useState(0);
   const [activeCard, setActiveCard] = useState(`card${feedToggle}`);
+
+
 
   let togglePrevious = () => {
     setFeedToggle((prevIdx) => (prevIdx - 1 + 7) % 7);
@@ -15,6 +17,16 @@ const Feedback = () => {
   let toggleNext = () => {
     setFeedToggle((prevIdx) => (prevIdx + 1) % 7);
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      toggleNext();
+      setActiveCard(`card${(feedToggle+1)%7}`);
+    }, 3500); // 3500 milliseconds = 3.5 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, );
 
   const feed = [
     {
